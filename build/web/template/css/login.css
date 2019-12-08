@@ -1,0 +1,166 @@
+*{}
+.register.ra{
+    right: 0px !important;
+    display: block !important;
+}
+.register .text-box input#age, .register .text-box input#email {
+    width: 80%;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    margin: 0px 20px;
+}
+
+.register .text-box {
+}
+
+.register .text-box input {
+    padding: 0px !important;
+}
+
+.login .register {
+    position: absolute;
+    top: 0px;
+    right: -360px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #abe6ab;
+    background-color: #abe6ab;
+    z-index: 10;
+    transition: 0.4s;
+    display: none;
+}
+
+.login .text-box input[type="text"]:hover span#erroruser {
+}
+
+.background .login span#erroruser {
+    padding-left: 46px;
+    font-size: 12px;
+    color: red;
+}
+.background .login span#errorpass {
+    padding-left: 46px;
+    font-size: 12px;
+    color: red;
+}
+
+.login .btn input[type="button"] {
+    padding: 10px;
+    margin-right: 15px;
+    background-color: #9fc8e8;
+    border-radius: 10px;
+}
+
+.login .btn input[type="submit"] {
+    padding: 10px;
+    margin-left: 15px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.background .login .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login .forget {
+    float: right;
+    padding-top: 6px;
+}
+
+.login .remember label {
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.login .remember {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+
+.background .login .text-box {
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+.login .text-box input[type="text"],.login .text-box input[type="password"] {
+    background: none;
+    outline: none;
+    border: none;
+    width: 80%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    margin: 0px 20px;
+}
+
+.background .login .logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.background .login form {
+    display: block;
+}
+
+
+
+.background .logo.top {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.login span.title.top {
+    padding: 18px 0px;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.login span.logo.top {
+    padding-top: 20px;
+}
+
+.background .login {
+    width: 360px;
+    box-sizing: border-box;
+    border: 1px solid #abe6abcc;
+    background-color: #abe6abcc;
+    position: relative;
+}
+.background{
+    background-image: url('../images/bg-01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 679px;
+    max-height: 679px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    *{}
+
+.background {
+    min-height: 1024px;
+}
+}
+
+@media (max-width: 360px) {
+    *{}
+
+
+}
