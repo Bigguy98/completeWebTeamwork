@@ -243,4 +243,17 @@ public class CartDaoImpl extends JDBCConnection implements CartDAO{
         }
         return carts;
     }
+
+    @Override
+    public void delete(int cartId, int itemId) {
+        try {
+            String sql = "delete from item_cart where cartID  = ? and itemID = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, cartId);
+            ps.setInt(2, itemId);
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(CartDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

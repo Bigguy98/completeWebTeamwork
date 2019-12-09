@@ -31,7 +31,10 @@ public class UpdateCartItemServlet extends HttpServlet{
         Integer itemId = Integer.valueOf(req.getParameter("itemId"));
         Integer number = Integer.valueOf(req.getParameter("number"));
         
+        if(number == 0) cartDao.delete(cartId, itemId);
         cartDao.updateCartItem(cartId, itemId, number);
+        
+        
     }
     
     

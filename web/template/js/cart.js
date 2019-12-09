@@ -1,14 +1,16 @@
 var items;
 var cartId;
 var payment = 0;
+var showStatus;
 $(document).ready(function() {
     cartId = sessionStorage.getItem("cartId");
-    if(cartId != null) {
+    if(cartId !== null) {
         loadData();
     }
     
 });
 function loadData() {
+    console.log("Loading data");
     $.ajax({
         url: "/cart/getById",
         type: "post",
@@ -16,20 +18,23 @@ function loadData() {
             "cartId": cartId
         },
         success: function (response) {
-            handlerData(JSON.parse(response));
+            var data  = JSON.parse(response);
+            items = data.items;
+            showStatus = Array(items.length).fill(1);
+            handlerData(items);
         }
         
     }); 
     
 }
-function handlerData(data) {
+function handlerData(items) {
     $('#my-table').empty();
-    items = data.items;//xem hàm này
-    items.forEach(function (value){
-        console.log(value);
-        buildRow(value);
-        
-        payment += value.number*value.item.price;
+    console.log(items);
+    items.forEach(function (value, index){
+        if(showStatus[index] === 1){
+            buildRow(value);        
+            payment += value.number*value.item.price;
+        }
     });
     $('#payment').html(payment.toLocaleString('it-IT', {style : 'currency', currency : 'VND'}));//xem ham nay
 }
@@ -66,6 +71,7 @@ function buildRow(data) {
     
     var inputnumber = document.createElement("input");
     inputnumber.setAttribute("type","number");
+    inputnumber.setAttribute("min",0);
     inputnumber.setAttribute("id", data.item.id);
     inputnumber.setAttribute("class","item-number");
     inputnumber.value = data.number;
@@ -87,24 +93,42 @@ function buildRow(data) {
     document.getElementById("my-table").appendChild(table_row);
 }
 function update() {
-    var inputs = $('.item-number');
+    var inputs = $('.item-number');    
+    
+ 
     for(var i =0; i < inputs.length; i++ ){
         var num = inputs[i];
-        console.log(num.id + " " + num.value);
-        updateItemNumber(num.id, num.value);        
+        items.forEach(function(value){
+            
+            if(value.item.id == num.id) {
+                console.log(value.item.id);
+                value.number = num.value; 
+            }
+        });
+//        console.log(num.id + " " + num.value);
+        updateItemNumber(num.id, num.value);  
+        if(num.value === "0") showStatus[i] = 0;
     }
+//    console.log(showStatus);
     
-    //update thì có cần phải ghi lại html không
+    handlerData(items);
+    
+//    update thì có cần phải ghi lại html không
     payment = 0;
     items.forEach(function (value){
         var id = value.item.id;
         var price = value.item.price;
-        var number = $('#'+id).val();
+        var number = value.number;
         var total = price*number;
+//        console.log(price + " " + number);
+//        console.log(total);
         payment += total;
-        $('#total'+id).html(total.toLocaleString('it-IT', {style : 'currency', currency : 'VND'}));
+//        $('#total'+id).html(total.toLocaleString('it-IT', {style : 'currency', currency : 'VND'}));
     });
     $('#payment').html(payment.toLocaleString('it-IT', {style : 'currency', currency : 'VND'}));
+    
+    alert("Cap nhat thanh cong");
+    
 }
 function updateItemNumber(itemId, itemNumber) {
     $.ajax({

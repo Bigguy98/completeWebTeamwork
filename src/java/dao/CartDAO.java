@@ -36,4 +36,6 @@ public interface CartDAO {
     int countCart();
     
     List<Cart> getCartPage(int pageSize,int currentPage);
+    
+    void delete(int cartId, int itemId);
 }

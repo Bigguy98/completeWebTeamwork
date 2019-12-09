@@ -48,7 +48,8 @@ function showProduct(data) {
         var column_2 = document.createElement("td");
         column_2.setAttribute("class","column-2");
         var img = document.createElement("img");
-     //   img.setAttribute("src","/image?image=" + item.image);
+        img.setAttribute("src","/image?image=" + item.image);
+        column_2.appendChild(img);
         
         var column_3 = document.createElement("td");
         column_3.setAttribute("class","column-3");

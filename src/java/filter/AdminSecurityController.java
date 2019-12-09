@@ -22,7 +22,7 @@ import model.Customer;
  *
  * @author QuaMin
  */
-//@WebFilter(urlPatterns = "/admin/*")
+@WebFilter(urlPatterns = "/admin/*")
 public class AdminSecurityController implements Filter{
 
     @Override

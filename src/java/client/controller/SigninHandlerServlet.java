@@ -52,6 +52,7 @@ public class SigninHandlerServlet extends HttpServlet{
         
         if(!name.equals("") && !address.equals("") && !username.equals("") && !password.equals("")) {
             Customer c = new Customer(name, age, address, username, SecurityUtil.encode(password));
+            c.setRole("CLIENT");
             int nextId = customerDao.create(c);
             if(nextId != 0) System.out.println("created new customer: " + nextId);
             return nextId;
