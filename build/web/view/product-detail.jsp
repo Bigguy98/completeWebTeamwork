@@ -77,7 +77,7 @@
 						<div class="label">Số lượng</div>
 						<div class="quantity-product-inner">
 							<div class="quantity">
-								<input type="number" id="item-number">
+								<input type="number" id="item-number" min="1">
 							</div>
 						</div>
 					</div>

@@ -39,10 +39,18 @@ public class AddItemToCartServlet extends HttpServlet{
         
         
         if(itemId != null && number != null) {
-            Item item = itemDao.getItemById(itemId);
-            CartItem cartItem = new CartItem(item, number);
             
-            cartDao.createCartItem(cartItem, cartId);
+            Integer previousNumber = cartDao.getCartItemNumber(cartId, itemId);
+            
+            if(previousNumber == 0) {
+                Item item = itemDao.getItemById(itemId);
+                CartItem cartItem = new CartItem(item, number);
+
+                cartDao.createCartItem(cartItem, cartId);
+            }
+            else {
+                cartDao.updateCartItem(cartId, itemId, number + previousNumber);
+            }
         }
     }
     

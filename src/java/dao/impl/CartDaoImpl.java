@@ -256,4 +256,23 @@ public class CartDaoImpl extends JDBCConnection implements CartDAO{
             Logger.getLogger(CartDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    @Override
+    public Integer getCartItemNumber(int cartID, int itemID) {
+        int number = 0;
+        try {
+            String sql = "select * from item_cart where cartID  = ? and itemID = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, cartID);
+            ps.setInt(2, itemID);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()) {
+                number = rs.getInt("number");
+            }
+            return number;
+        } catch (SQLException ex) {
+            Logger.getLogger(CartDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return number;
+    }
 }

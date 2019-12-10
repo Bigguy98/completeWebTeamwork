@@ -26,10 +26,10 @@ function fillData(item) {
 }
 function addItemToCart() {
     var number = $('#item-number').val();
-    if(number < 0) {
-        alert("So luong phai lon hon 0");
-        return;
-    }
+//    if(number < 0) {
+//        alert("So luong phai lon hon 0");
+//        return;
+//    }
     $.ajax({
         url: "/cart/addItem",
         type: "post",

@@ -38,4 +38,6 @@ public interface CartDAO {
     List<Cart> getCartPage(int pageSize,int currentPage);
     
     void delete(int cartId, int itemId);
+    
+    Integer getCartItemNumber(int cartID, int itemID);
 }

@@ -3,27 +3,43 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Netbean_projects/web/web/template/js/admin/listPerson.js</file>
-            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/AddPersonController.java</file>
-            <file>file:/E:/Netbean_projects/web/web/view/admin/slideMenu.jsp</file>
-            <file>file:/E:/Netbean_projects/web/web/view/admin/cartClient.jsp</file>
-            <file>file:/E:/Netbean_projects/web/web/META-INF/context.xml</file>
+            <file>file:/E:/Netbean_projects/web/web/template/js/index.js</file>
             <file>file:/E:/Netbean_projects/web/web/template/js/admin/addPerson.js</file>
-            <file>file:/E:/Netbean_projects/web/web/view/admin/listPerson.jsp</file>
-            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/LoginAdminController.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/GetCartIDServlet.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/dao/CartDAO.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/AddItemToCartServlet.java</file>
             <file>file:/E:/Netbean_projects/web/web/view/admin/addProduct.jsp</file>
             <file>file:/E:/Netbean_projects/web/src/java/dao/impl/CustomerDaoImpl.java</file>
             <file>file:/E:/Netbean_projects/web/src/java/admin/controller/ListPersonController.java</file>
             <file>file:/E:/Netbean_projects/web/web/template/js/admin/listProduct.js</file>
-            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/WelcomeAdminController.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/CreateCartServlet.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/CountItemServlet.java</file>
             <file>file:/E:/Netbean_projects/web/src/java/admin/controller/ListProductController.java</file>
-            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/AddProductController.java</file>
-            <file>file:/E:/Netbean_projects/web/web/template/js/admin/cartClient.js</file>
-            <file>file:/E:/Netbean_projects/web/src/java/filter/AdminSecurityController.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/model/Customer.java</file>
+            <file>file:/E:/Netbean_projects/web/web/template/js/product-detail.js</file>
             <file>file:/E:/Netbean_projects/web/web/view/admin/addPerson.jsp</file>
             <file>file:/E:/Netbean_projects/web/web/template/js/login.js</file>
+            <file>file:/E:/Netbean_projects/web/web/view/product-detail.jsp</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/CustomerServlet.java</file>
+            <file>file:/E:/Netbean_projects/web/web/template/js/cart.js</file>
+            <file>file:/E:/Netbean_projects/web/web/template/js/admin/listPerson.js</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/GetAllItemServlet.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/AddPersonController.java</file>
+            <file>file:/E:/Netbean_projects/web/web/view/admin/slideMenu.jsp</file>
+            <file>file:/E:/Netbean_projects/web/web/view/admin/cartClient.jsp</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/UpdateCartItemServlet.java</file>
+            <file>file:/E:/Netbean_projects/web/web/view/admin/listPerson.jsp</file>
+            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/LoginAdminController.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/WelcomeAdminController.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/SigninHandlerServlet.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/dao/impl/CartDaoImpl.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/admin/controller/AddProductController.java</file>
+            <file>file:/E:/Netbean_projects/web/web/template/js/admin/cartClient.js</file>
             <file>file:/E:/Netbean_projects/web/web/template/js/admin/addProduct.js</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/LoginHandlerServlet.java</file>
             <file>file:/E:/Netbean_projects/web/src/java/jdbc/JDBCConnection.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/CartDetailServlet.java</file>
+            <file>file:/E:/Netbean_projects/web/src/java/client/controller/GetCartServlet.java</file>
             <file>file:/E:/Netbean_projects/web/web/view/admin/listProduct.jsp</file>
         </group>
     </open-files>

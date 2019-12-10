@@ -47,6 +47,11 @@ function signin() {
     if(name == "" || username == "" || password == "" || address == "" || age == "" ) {
         alert("Infomation can not be empty!");
         return;
+    };
+    
+    if(isNaN(age) || age < 0) {
+        alert("Tuoi phai la mot so nguyen duong");
+        return;
     }
     
     $.ajax({
@@ -68,9 +73,10 @@ function signin() {
             
         },
         error: function(reponse) {           
-            alert(reponse.responseText);
+            console.log(reponse.responseText);
+            alert("Thong tin dang ky khong hop le");
         }
-    })   
+    });
 };
 
 function getCart(userId) {
